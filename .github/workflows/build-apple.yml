@@ -5,6 +5,12 @@ on:
       ref:
         required: true
         type: string
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to build (branch, tag, or SHA)"
+        required: true
+        default: "main"
 jobs:
   build_ios:
     name: iOS
